@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "celestial",
+	"version": "1.1",
+	"name": "Celestial",
+	"description": "Mod for the Astral SMP!!!",
+	"authors": [
+		"TheVortex8196"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Saccotto15/Celestial/tree/main"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/celestial/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.thevortex8196.celestial.Celestial"
+		],
+		"fabric-datagen": [
+			"net.thevortex8196.celestial.CelestialDataGenerator"
+		],
+		"client": [
+			"net.thevortex8196.celestial.CelestialClient"
+		]
+	},
+	"mixins": [
+		"celestial.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
