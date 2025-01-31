@@ -2,6 +2,10 @@ package net.thevortex8196.celestial;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.thevortex8196.celestial.block.ModBlocks;
+import net.thevortex8196.celestial.effect.ModEffects;
+import net.thevortex8196.celestial.item.ModCreativeTab;
+import net.thevortex8196.celestial.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +16,11 @@ public class Celestial implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModCreativeTab.registerCreativeTab();
 
+		ModEffects.registerModEffects();
+
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }

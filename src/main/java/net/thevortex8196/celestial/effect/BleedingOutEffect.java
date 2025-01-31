@@ -1,0 +1,24 @@
+package net.thevortex8196.celestial.effect;
+
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.particle.ParticleEffect;
+
+public class BleedingOutEffect extends StatusEffect {
+    protected BleedingOutEffect(StatusEffectCategory category, int color) {
+        super(category, color);
+    }
+
+    @Override
+    public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
+        entity.damage(entity.getDamageSources().genericKill(), 2);
+        return true;
+    }
+
+    @Override
+    public boolean canApplyUpdateEffect(int duration, int amplifier) {
+        int i = 25 >> amplifier;
+        return i == 0 || duration % i == 0;
+    }
+}
