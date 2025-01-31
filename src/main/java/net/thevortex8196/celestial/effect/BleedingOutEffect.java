@@ -12,7 +12,7 @@ public class BleedingOutEffect extends StatusEffect {
 
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
-        entity.damage(entity.getDamageSources().genericKill(), 2);
+        entity.damage(entity.getDamageSources().genericKill(), 1);
         return true;
     }
 

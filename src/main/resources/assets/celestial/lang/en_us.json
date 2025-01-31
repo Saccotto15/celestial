@@ -2,11 +2,17 @@
   "item.celestial.heaven_scythe": "Heaven Scythe",
   "item.celestial.celestium": "Celestium Ingot",
   "item.celestial.harpoon": "Harpoon",
+  "item.celestial.vex_tear": "Vex Tear",
+  "item.celestial.vex_tear_helmet": "Vex Tear Helmet",
+  "item.celestial.vex_tear_chestplate": "Vex Tear Chestplate",
+  "item.celestial.vex_tear_leggings": "Vex Tear Leggings",
+  "item.celestial.vex_tear_boots": "Vex Tear Boots",
 
   "block.celestial.celestium_block": "Celestium Block",
 
   "effect.celestial.bleeding_out": "Bleeding Out",
 
   "creativetab.celestial.aaron": "Aaron",
-  "creativetab.celestial.william": "William"
+  "creativetab.celestial.william": "William",
+  "creativetab.celestial.leo": "Leo"
 }

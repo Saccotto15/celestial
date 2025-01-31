@@ -1,5 +1,6 @@
 package net.thevortex8196.celestial.item;
 
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -11,16 +12,34 @@ public class ModItems {
 
     //Aaron
     public static final Item CELESTIUM = registerItem("celestium", new Item(new Item.Settings()));
+    public static final Item HEAVEN_SCYTHE = registerItem("heaven_scythe", new Item(new Item.Settings()));
 
     //William
     public static final Item HARPOON = registerItem("harpoon", new HarpoonItem(new Item.Settings()));
     public static final Item HARPOON_3D = registerItem("harpoon_3d", new HarpoonItem(new Item.Settings()));
+
+    //Leo
+    public static final Item VEX_TEAR = registerItem("vex_tear", new Item(new Item.Settings()));
+
+    public static final Item VEX_TEAR_HELMET = registerItem("vex_tear_helmet",
+            new ArmorItem(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(35))));
+    public static final Item VEX_TEAR_CHESTPLATE = registerItem("vex_tear_chestplate",
+            new ArmorItem(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(35))));
+    public static final Item VEX_TEAR_LEGGINGS = registerItem("vex_tear_leggings",
+            new ArmorItem(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(35))));
+    public static final Item VEX_TEAR_BOOTS = registerItem("vex_tear_boots",
+            new ArmorItem(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(35))));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Celestial.MOD_ID, name), item);
     }
 
     public static void registerModItems() {
-        Celestial.LOGGER.info("Registering mod items for Celestial!");
+        Celestial.LOGGER.info("Registering Mod Items for Celestial!!!");
     }
 }

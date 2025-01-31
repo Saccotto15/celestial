@@ -30,6 +30,19 @@ public class ModCreativeTab {
                         entries.add(ModItems.HARPOON);
                     }).build());
 
+    public static final ItemGroup LEO = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(Celestial.MOD_ID, "leo"),
+            FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(ModItems.VEX_TEAR))
+                    .displayName(Text.translatable("creativetab.celestial.leo"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.VEX_TEAR);
+                        entries.add(ModItems.VEX_TEAR_HELMET);
+                        entries.add(ModItems.VEX_TEAR_CHESTPLATE);
+                        entries.add(ModItems.VEX_TEAR_LEGGINGS);
+                        entries.add(ModItems.VEX_TEAR_BOOTS);
+                    }).build());
+
     public static void registerCreativeTab() {
         Celestial.LOGGER.info("Registering Creative Mode Tabs for Celestial!!!");
     }
