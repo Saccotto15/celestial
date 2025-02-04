@@ -24,7 +24,7 @@ import java.util.random.RandomGenerator;
 
 public class HarpoonItem extends BaseAttackItem {
     public HarpoonItem(Item.Settings settings) {
-        super(settings.maxCount(1).maxDamage(1024).attributeModifiers(createAttributes(8, 1)));
+        super(settings.maxCount(1).maxDamage(1024).attributeModifiers(createAttributes(6, 1.5f)));
     }
 
     private static boolean isAboutToBreak(ItemStack stack) {
@@ -53,10 +53,10 @@ public class HarpoonItem extends BaseAttackItem {
                     user.setVelocity(lookDirection.multiply(strength));
                     user.velocityModified = true;
 
-                    ((PlayerEntity) user).getItemCooldownManager().set(this, 100);
+                    ((PlayerEntity) user).getItemCooldownManager().set(this, 60);
 
                     if (!isAboutToBreak(stack) || stack.isDamageable()) {
-                        stack.damage(1, user, LivingEntity.getSlotForHand(user.getActiveHand()));
+                        stack.damage(2, user, LivingEntity.getSlotForHand(user.getActiveHand()));
                     }
                 }
             }
@@ -87,9 +87,9 @@ public class HarpoonItem extends BaseAttackItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        int randomNum = (int)(Math.random() * 11);
+        int randomNum = 1 + (int)(Math.random() * 2);
         if (randomNum==1) {
-            target.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDING_OUT, 300, 0));
+            target.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDING_OUT, 200, 0));
         }
         return super.postHit(stack, target, attacker);
     }

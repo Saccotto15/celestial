@@ -16,6 +16,9 @@ public class ModEffects {
     public static final RegistryEntry<StatusEffect> BLEEDING_OUT = registerStatusEffect("bleeding_out",
             new BleedingOutEffect(StatusEffectCategory.HARMFUL, 0x8a0303));
 
+    public static final RegistryEntry<StatusEffect> RADIOACTIVE_POISONING = registerStatusEffect("radioactive_poisoning",
+            new RadioactivePoisoningEffect(StatusEffectCategory.HARMFUL, 0x2cfa1f));
+
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Celestial.MOD_ID, name), statusEffect);
     }

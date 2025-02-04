@@ -6,7 +6,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.thevortex8196.celestial.Celestial;
+import net.thevortex8196.celestial.item.custom.BombItem;
 import net.thevortex8196.celestial.item.custom.HarpoonItem;
+import net.thevortex8196.celestial.item.custom.ModArmorItem;
 
 public class ModItems {
 
@@ -22,7 +24,7 @@ public class ModItems {
     public static final Item VEX_TEAR = registerItem("vex_tear", new Item(new Item.Settings()));
 
     public static final Item VEX_TEAR_HELMET = registerItem("vex_tear_helmet",
-            new ArmorItem(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(35))));
     public static final Item VEX_TEAR_CHESTPLATE = registerItem("vex_tear_chestplate",
             new ArmorItem(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
@@ -33,6 +35,9 @@ public class ModItems {
     public static final Item VEX_TEAR_BOOTS = registerItem("vex_tear_boots",
             new ArmorItem(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(35))));
+
+    //Hanni
+    public static final Item BOMB = registerItem("bomb", new BombItem(new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {

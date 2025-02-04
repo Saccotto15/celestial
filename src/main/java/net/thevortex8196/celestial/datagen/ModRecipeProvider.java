@@ -28,6 +28,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerUpgradeRecipe(recipeExporter, Items.DIAMOND_CHESTPLATE, ModItems.VEX_TEAR, RecipeCategory.COMBAT, ModItems.VEX_TEAR_CHESTPLATE);
         offerUpgradeRecipe(recipeExporter, Items.DIAMOND_LEGGINGS, ModItems.VEX_TEAR, RecipeCategory.COMBAT, ModItems.VEX_TEAR_LEGGINGS);
         offerUpgradeRecipe(recipeExporter, Items.DIAMOND_BOOTS, ModItems.VEX_TEAR, RecipeCategory.COMBAT, ModItems.VEX_TEAR_BOOTS);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HARPOON)
+                .pattern(" ,#")
+                .pattern(" .,")
+                .pattern(".  ")
+                .input('#', Items.IRON_INGOT)
+                .input('.', Items.STICK)
+                .input(',', Items.STRING)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIUM)
+                .pattern(" , ")
+                .pattern(",#,")
+                .pattern(" , ")
+                .input('#', Items.IRON_INGOT)
+                .input(',', Items.QUARTZ)
+                .criterion(hasItem(Items.QUARTZ), conditionsFromItem(Items.QUARTZ))
+                .offerTo(recipeExporter, getItemPath(ModItems.CELESTIUM) + "_from_block");
+
     }
 
     public static void offerUpgradeRecipe(RecipeExporter exporter, Item input1, Item input2, RecipeCategory category, Item result) {

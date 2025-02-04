@@ -24,9 +24,9 @@ public class ModLootTableModifier {
             if (registryKey.equals(VEX_KEY)) {
                 LootPool vex_tear = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.5f))
+                        .conditionally(RandomChanceLootCondition.builder(0.3f))
                         .with(ItemEntry.builder(ModItems.VEX_TEAR))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f, 2f)).build())
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f, 1f)).build())
                         .build();
 
 
