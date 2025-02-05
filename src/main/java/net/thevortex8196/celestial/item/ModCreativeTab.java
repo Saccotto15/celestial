@@ -43,6 +43,16 @@ public class ModCreativeTab {
                         entries.add(ModItems.VEX_TEAR_BOOTS);
                     }).build());
 
+    public static final ItemGroup HANNI = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(Celestial.MOD_ID, "hanni"),
+            FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(ModItems.RADIOACTIVE_CORE))
+                    .displayName(Text.translatable("creativetab.celestial.hanni"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.RADIOACTIVE_CORE);
+                        entries.add(ModItems.BOMB);
+                    }).build());
+
     public static void registerCreativeTab() {
         Celestial.LOGGER.info("Registering Creative Mode Tabs for Celestial!!!");
     }

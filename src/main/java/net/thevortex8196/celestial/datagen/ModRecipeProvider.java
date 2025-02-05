@@ -48,6 +48,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.QUARTZ), conditionsFromItem(Items.QUARTZ))
                 .offerTo(recipeExporter, getItemPath(ModItems.CELESTIUM) + "_from_block");
 
+        allAround(recipeExporter, Items.REDSTONE_BLOCK, Items.IRON_INGOT, RecipeCategory.MISC, ModItems.RADIOACTIVE_CORE);
+        allAround(recipeExporter, ModItems.RADIOACTIVE_CORE, Items.TNT, RecipeCategory.COMBAT, ModItems.BOMB);
+
     }
 
     public static void offerUpgradeRecipe(RecipeExporter exporter, Item input1, Item input2, RecipeCategory category, Item result) {
@@ -56,5 +59,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 )
                 .criterion(hasItem(input2), conditionsFromItem(input2))
                 .offerTo(exporter, getItemPath(result) + "_smithing");
+    }
+
+    public static void allAround(RecipeExporter exporter, Item center, Item around, RecipeCategory category, Item result) {
+        ShapedRecipeJsonBuilder.create(category, result)
+                .pattern(",,,")
+                .pattern(",#,")
+                .pattern(",,,")
+                .input('#', center)
+                .input(',', around)
+                .criterion(hasItem(center), conditionsFromItem(center))
+                .offerTo(exporter);
     }
 }

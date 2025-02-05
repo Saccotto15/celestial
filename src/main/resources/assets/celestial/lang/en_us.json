@@ -8,12 +8,15 @@
   "item.celestial.vex_tear_leggings": "Vex Tear Leggings",
   "item.celestial.vex_tear_boots": "Vex Tear Boots",
   "item.celestial.bomb": "Bomb",
+  "item.celestial.radioactive_core": "Radioactive Core",
 
   "block.celestial.celestium_block": "Celestium Block",
 
   "effect.celestial.bleeding_out": "Bleeding Out",
+  "effect.celestial.radioactive_poisoning": "Radioactive Poisoning",
 
   "creativetab.celestial.aaron": "Aaron",
   "creativetab.celestial.william": "William",
-  "creativetab.celestial.leo": "Leo"
+  "creativetab.celestial.leo": "Leo",
+  "creativetab.celestial.hanni": "Hanni"
 }

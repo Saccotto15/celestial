@@ -39,6 +39,8 @@ public class ModItems {
     //Hanni
     public static final Item BOMB = registerItem("bomb", new BombItem(new Item.Settings()));
 
+    public static final Item RADIOACTIVE_CORE = registerItem("radioactive_core", new Item(new Item.Settings()));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Celestial.MOD_ID, name), item);

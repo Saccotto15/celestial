@@ -24,6 +24,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CELESTIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.VEX_TEAR, Models.GENERATED);
         itemModelGenerator.register(ModItems.HARPOON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RADIOACTIVE_CORE, Models.GENERATED);
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.VEX_TEAR_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.VEX_TEAR_CHESTPLATE));

@@ -13,7 +13,7 @@ import net.thevortex8196.celestial.entity.custom.BombEntity;
 
 public class BombItem extends Item {
     public BombItem(Settings settings) {
-        super(settings);
+        super(settings.maxCount(16));
     }
 
     @Override

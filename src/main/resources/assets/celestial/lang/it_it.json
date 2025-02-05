@@ -8,8 +8,10 @@
   "item.celestial.vex_tear_leggings": "Gambiere di lacrima di vex",
   "item.celestial.vex_tear_boots": "Stivali di lacrima di vex",
   "item.celestial.bomb": "Bomba",
+  "item.celestial.radioactive_core": "Nucleo radioattivo",
 
   "block.celestial.celestium_block": "Blocco di celestium",
 
-  "effect.celestial.bleeding_out": "Dissanguamento"
+  "effect.celestial.bleeding_out": "Dissanguamento",
+  "effect.celestial.radioactive_poisoning": "Avvelenamento da radiazioni"
 }
