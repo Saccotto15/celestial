@@ -38,8 +38,23 @@ public class ModItems {
 
     //Hanni
     public static final Item BOMB = registerItem("bomb", new BombItem(new Item.Settings()));
-
     public static final Item RADIOACTIVE_CORE = registerItem("radioactive_core", new Item(new Item.Settings()));
+
+    public static final Item OBSIDIAN_HELMET = registerItem("obsidian_helmet",
+            new ModArmorItem(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(1))));
+    public static final Item OBSIDIAN_CHESTPLATE = registerItem("obsidian_chestplate",
+            new ArmorItem(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(1))));
+    public static final Item OBSIDIAN_LEGGINGS = registerItem("obsidian_leggings",
+            new ArmorItem(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(1))));
+    public static final Item OBSIDIAN_BOOTS = registerItem("obsidian_boots",
+            new ArmorItem(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(1))));
+
+    //Jonas
+    public static final Item DRILL = registerItem("drill", new Item(new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {

@@ -30,5 +30,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.VEX_TEAR_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.VEX_TEAR_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.VEX_TEAR_BOOTS));
+
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.OBSIDIAN_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.OBSIDIAN_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.OBSIDIAN_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.OBSIDIAN_BOOTS));
     }
 }

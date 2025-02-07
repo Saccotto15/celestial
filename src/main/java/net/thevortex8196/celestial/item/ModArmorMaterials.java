@@ -27,6 +27,16 @@ public class ModArmorMaterials {
              }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ModItems.VEX_TEAR),
                      List.of(new ArmorMaterial.Layer(Identifier.of(Celestial.MOD_ID, "vex_tear"))), 3f, 0.1f ));
 
+    public static final RegistryEntry<ArmorMaterial> OBSIDIAN_ARMOR_MATERIAL = registerArmorMaterial("obsidian",
+            ()-> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.HELMET, 1);
+                map.put(ArmorItem.Type.CHESTPLATE, 3);
+                map.put(ArmorItem.Type.LEGGINGS, 2);
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.BODY, 3 );
+            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ModItems.VEX_TEAR),
+                    List.of(new ArmorMaterial.Layer(Identifier.of(Celestial.MOD_ID, "obsidian"))), 0f, 1f ));
+
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {
         return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(Celestial.MOD_ID, name), material.get());
     }
