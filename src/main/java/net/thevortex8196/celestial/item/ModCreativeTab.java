@@ -51,7 +51,6 @@ public class ModCreativeTab {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RADIOACTIVE_CORE);
                         entries.add(ModItems.BOMB);
-                        entries.add(ModItems.BOMB);
                     }).build());
 
     public static void registerCreativeTab() {
