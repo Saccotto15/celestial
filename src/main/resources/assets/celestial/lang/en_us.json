@@ -9,6 +9,14 @@
   "item.celestial.vex_tear_boots": "Vex Tear Boots",
   "item.celestial.bomb": "Bomb",
   "item.celestial.radioactive_core": "Radioactive Core",
+  "item.celestial.obsidian_helmet": "Obsidian Helmet",
+  "item.celestial.obsidian_chestplate": "Obsidian Chestplate",
+  "item.celestial.obsidian_leggings": "Obsidian Leggings",
+  "item.celestial.obsidian_boots": "Obsidian Boots",
+  "item.celestial.drill": "Drill",
+  "item.celestial.eye_of_the_end": "Eye Of The End",
+  "item.celestial.shulker_dust": "Shulker Dust",
+  "item.celestial.ender_leather": "Ender Leather",
 
   "block.celestial.celestium_block": "Celestium Block",
 
@@ -18,5 +26,6 @@
   "creativetab.celestial.aaron": "Aaron",
   "creativetab.celestial.william": "William",
   "creativetab.celestial.leo": "Leo",
-  "creativetab.celestial.hanni": "Hanni"
+  "creativetab.celestial.hanni": "Hanni",
+  "creativetab.celestial.jonas": "Joans"
 }

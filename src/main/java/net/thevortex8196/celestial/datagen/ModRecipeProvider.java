@@ -39,17 +39,60 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(recipeExporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CELESTIUM)
-                .pattern(" , ")
-                .pattern(",#,")
-                .pattern(" , ")
-                .input('#', Items.IRON_INGOT)
-                .input(',', Items.QUARTZ)
-                .criterion(hasItem(Items.QUARTZ), conditionsFromItem(Items.QUARTZ))
-                .offerTo(recipeExporter, getItemPath(ModItems.CELESTIUM) + "_from_block");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBSIDIAN_HELMET)
+                .pattern(",,,")
+                .pattern(", ,")
+                .input(',', Items.OBSIDIAN)
+                .criterion(hasItem(Items.QUARTZ), conditionsFromItem(Items.OBSIDIAN))
+                .offerTo(recipeExporter, getItemPath(ModItems.OBSIDIAN_HELMET));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBSIDIAN_CHESTPLATE)
+                .pattern(", ,")
+                .pattern(",,,")
+                .pattern(",,,")
+                .input(',', Items.OBSIDIAN)
+                .criterion(hasItem(Items.QUARTZ), conditionsFromItem(Items.OBSIDIAN))
+                .offerTo(recipeExporter, getItemPath(ModItems.OBSIDIAN_CHESTPLATE));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBSIDIAN_LEGGINGS)
+                .pattern(",,,")
+                .pattern(", ,")
+                .pattern(", ,")
+                .input(',', Items.OBSIDIAN)
+                .criterion(hasItem(Items.OBSIDIAN), conditionsFromItem(Items.OBSIDIAN))
+                .offerTo(recipeExporter, getItemPath(ModItems.OBSIDIAN_LEGGINGS));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBSIDIAN_BOOTS)
+                .pattern(", ,")
+                .pattern(", ,")
+                .input(',', Items.OBSIDIAN)
+                .criterion(hasItem(Items.QUARTZ), conditionsFromItem(Items.OBSIDIAN))
+                .offerTo(recipeExporter, getItemPath(ModItems.OBSIDIAN_BOOTS));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DRILL)
+                .pattern(",, ")
+                .pattern(",.#")
+                .pattern(",, ")
+                .input('#', Items.IRON_PICKAXE)
+                .input('.', Items.REDSTONE_BLOCK)
+                .input(',', Items.SMOOTH_STONE)
+                .criterion(hasItem(Items.REDSTONE_BLOCK), conditionsFromItem(Items.REDSTONE_BLOCK))
+                .offerTo(recipeExporter, getItemPath(ModItems.DRILL));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HEAVEN_SCYTHE)
+                .pattern(",#")
+                .pattern(".#")
+                .pattern(". ")
+                .input('#', Items.DIAMOND)
+                .input('.', ModItems.CELESTIUM)
+                .input(',', ModItems.EYE_OF_THE_END)
+                .criterion(hasItem(ModItems.EYE_OF_THE_END), conditionsFromItem(ModItems.EYE_OF_THE_END))
+                .offerTo(recipeExporter, getItemPath(ModItems.HEAVEN_SCYTHE));
 
         allAround(recipeExporter, Items.REDSTONE_BLOCK, Items.IRON_INGOT, RecipeCategory.MISC, ModItems.RADIOACTIVE_CORE);
         allAround(recipeExporter, ModItems.RADIOACTIVE_CORE, Items.TNT, RecipeCategory.COMBAT, ModItems.BOMB);
+        allAround(recipeExporter, Items.ENDER_EYE, Items.QUARTZ, RecipeCategory.MISC, ModItems.CELESTIUM);
+        allAround(recipeExporter, Items.ENDER_EYE, ModItems.SHULKER_DUST, RecipeCategory.MISC, ModItems.EYE_OF_THE_END);
 
     }
 
@@ -69,6 +112,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('#', center)
                 .input(',', around)
                 .criterion(hasItem(center), conditionsFromItem(center))
-                .offerTo(exporter);
+                .offerTo(exporter, getItemPath(result) + "_all_around");
     }
 }
