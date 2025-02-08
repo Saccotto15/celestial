@@ -18,7 +18,6 @@ public class ModItems {
 
     //William
     public static final Item HARPOON = registerItem("harpoon", new HarpoonItem(new Item.Settings()));
-    public static final Item HARPOON_3D = registerItem("harpoon_3d", new HarpoonItem(new Item.Settings()));
 
     //Leo
     public static final Item VEX_TEAR = registerItem("vex_tear", new Item(new Item.Settings()));

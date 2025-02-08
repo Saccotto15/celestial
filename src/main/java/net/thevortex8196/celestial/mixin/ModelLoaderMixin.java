@@ -17,6 +17,6 @@ public abstract class ModelLoaderMixin {
 
     @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1))
     private void onInit(CallbackInfo ci) {
-        this.loadItemModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Celestial.MOD_ID, "harpoon")));
+        this.loadItemModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Celestial.MOD_ID, "harpoon_3d")));
     }
 }
