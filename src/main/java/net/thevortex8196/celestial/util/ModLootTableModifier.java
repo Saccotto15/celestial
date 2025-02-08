@@ -18,6 +18,7 @@ import java.util.List;
 public class ModLootTableModifier {
 
     private static final RegistryKey<LootTable> VEX_KEY = EntityType.VEX.getLootTableId();
+    private static final RegistryKey<LootTable> SHULKER_KEY = EntityType.SHULKER.getLootTableId();
 
     public static void register() {
         LootTableEvents.MODIFY.register((registryKey, builder, lootTableSource, wrapperLookup) -> {
@@ -27,6 +28,17 @@ public class ModLootTableModifier {
                         .conditionally(RandomChanceLootCondition.builder(0.3f))
                         .with(ItemEntry.builder(ModItems.VEX_TEAR))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f, 1f)).build())
+                        .build();
+
+
+                builder.pools(List.of(vex_tear));
+            }
+            if (registryKey.equals(SHULKER_KEY)) {
+                LootPool vex_tear = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.1f))
+                        .with(ItemEntry.builder(ModItems.SHULKER_DUST))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f, 2f)).build())
                         .build();
 
 

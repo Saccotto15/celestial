@@ -11,6 +11,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
+import net.thevortex8196.celestial.effect.ModEffects;
 import net.thevortex8196.celestial.item.ModArmorMaterials;
 
 import java.util.List;
@@ -21,6 +22,9 @@ public class ModArmorItem extends ArmorItem {
             (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.VEX_TEAR_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20, 1, false, false, false)))
+                    .put(ModArmorMaterials.OBSIDIAN_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20, 0, false, false, false),
+                                    new StatusEffectInstance(ModEffects.RADIOACTIVE_POISONING, 0, -1, false, false, false)))
                     .build();
 
     public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
@@ -54,12 +58,12 @@ public class ModArmorItem extends ArmorItem {
     private void addStatusEffectForMaterial(PlayerEntity player, RegistryEntry<ArmorMaterial> mapArmorMaterial, List<StatusEffectInstance> mapStatusEffect) {
         boolean hasPlayerEffect = mapStatusEffect.stream().allMatch(statusEffectInstance -> player.hasStatusEffect(statusEffectInstance.getEffectType()));
 
-        if(!hasPlayerEffect) {
+        //if(!hasPlayerEffect) {
             for (StatusEffectInstance instance : mapStatusEffect) {
                 player.addStatusEffect(new StatusEffectInstance(instance.getEffectType(),
                         instance.getDuration(), instance.getAmplifier(), instance.isAmbient(), instance.shouldShowParticles()));
             }
-        }
+        //}
     }
 
     private boolean hasFullSuitOfArmorOn(PlayerEntity player) {

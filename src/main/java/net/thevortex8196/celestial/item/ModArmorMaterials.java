@@ -1,5 +1,6 @@
 package net.thevortex8196.celestial.item;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ArmorMaterials;
@@ -34,7 +35,7 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.BODY, 3 );
-            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ModItems.VEX_TEAR),
+            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(Blocks.OBSIDIAN),
                     List.of(new ArmorMaterial.Layer(Identifier.of(Celestial.MOD_ID, "obsidian"))), 0f, 1f ));
 
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {

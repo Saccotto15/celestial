@@ -36,6 +36,9 @@ public abstract class ItemRendererMixin {
         if (stack.getItem() == ModItems.HARPOON && (renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED)) {
             return getModels().getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Celestial.MOD_ID, "harpoon")));
         }
+        if (stack.getItem() == ModItems.HEAVEN_SCYTHE && (renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED)) {
+            return getModels().getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Celestial.MOD_ID, "heaven_scythe")));
+        }
 
         return bakedModel;
     }
@@ -49,6 +52,9 @@ public abstract class ItemRendererMixin {
     public BakedModel getHeldItemModelMixin(BakedModel bakedModel, @Local(argsOnly = true) ItemStack stack) {
         if (stack.getItem() == ModItems.HARPOON) {
             return this.models.getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Celestial.MOD_ID, "harpoon_3d")));
+        }
+        if (stack.getItem() == ModItems.HEAVEN_SCYTHE) {
+            return this.models.getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Celestial.MOD_ID, "heaven_scythe_3d")));
         }
 
         return bakedModel;
